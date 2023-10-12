@@ -1,27 +1,23 @@
 *
 	font-family: 'Roboto', sans-serif
 
-@mixin white
-	color: #fff
+$white: #fff
 
-@mixin blue
-	color: #1EACC7
+$blue: #1EACC7
 
-@mixin light_blue
-	color: #1CA8C3
+$light_blue: #1CA8C3
 
-@mixin red
-	color: #FF5656
+$red: #FF5656
 
 a:link, a:visited, a:active, a:hover
-	@include white
+	color: $white
 	text-decoration: none
 .main_btn
 	background-image: linear-gradient(to top, #1EACC7 0%, #4CE2FF 100%)
 	box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
 	font-size: 16px
-	@include white
+	color: $white
 	font-weight: 400
 	border-radius: 7px
 .label
@@ -29,7 +25,7 @@ a:link, a:visited, a:active, a:hover
 	background-color: #000
 	width: 113px
 	height: 24px
-	@include white
+	color: $white
 	text-align: center
 	font-size: 11px
 	font-style: normal
@@ -59,7 +55,7 @@ a:link, a:visited, a:active, a:hover
 	position: relative
 	height: 52px
 	background-color: #212121
-	@include white
+	color: $white
 .menu_list
 	list-style-type: none
 	display: flex
@@ -114,7 +110,7 @@ a:link, a:visited, a:active, a:hover
 	padding-top: 88px
 	background: url(../img/background/uber_bg.png) center center/cover no-repeat
 	z-index: 1
-	@include white
+	color: $white
 .promo_title
 	padding-top: 67px
 	font-size: 42px
@@ -174,7 +170,7 @@ a:link, a:visited, a:active, a:hover
 	padding-left: 28px
 .adv_item_title
 	max-width: 341px
-	@include blue
+	color: $blue
 	font-size: 17px
 	font-style: normal
 	font-weight: 400
@@ -219,7 +215,7 @@ a:link, a:visited, a:active, a:hover
 
 .app_items_title
 	padding-top: 88px
-	@include white
+	color: $white
 	text-align: center
 	font-size: 24px
 	font-style: normal
@@ -255,9 +251,9 @@ a:link, a:visited, a:active, a:hover
 		background-color: #fff
 		color: #000
 	&_title
-		@include white
+		color: $white
 	&_subtitle
-		@include white
+		color: $white
 		text-align: center
 		font-size: 17px
 		font-style: normal
@@ -292,7 +288,7 @@ a:link, a:visited, a:active, a:hover
 	&_block
 		padding-top: 33px
 	&_title
-		@include light_blue
+		color: $light_blue
 
 .condition_title
 	font-size: 22px
@@ -307,8 +303,8 @@ a:link, a:visited, a:active, a:hover
 	line-height: 24px
 
 .condition_block_desc
-	@include light_blue
+	color: $light_blue
 
 .condition_required_title
 	margin-top: 61px
-	@include red
+	color: $red
