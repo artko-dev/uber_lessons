@@ -210,8 +210,30 @@ a:link, a:visited, a:active, a:hover
 	cursor: pointer
 
 .app_items_plus
-	display: block
-	max-width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	position: absolute
+	&::before
+		content: ''
+		background-color: $light_blue
+		width: 14px
+		height: 2px
+	&::after
+		content: ''
+		position: absolute
+		width: 2px
+		height: 14px
+		background-color: $light_blue
+	
+.app_items_icon	
+	&:hover
+		transition: 0.3s all
+		background-color: #232323
+		.app_items_plus	
+			&:before, &:after
+				transition: 0.3s all
+				background-color: $red
 
 .app_items_title
 	padding-top: 88px
@@ -283,28 +305,37 @@ a:link, a:visited, a:active, a:hover
 /*	  -----	  Condition Section	  -----	  */ 
 
 .condition
-	max-height: 920px
 	padding: 68px 0 80px 0
 	&_block
 		padding-top: 33px
 	&_title
 		color: $light_blue
+		font-size: 22px
+		font-weight: 400
+		line-height: 24px
+	&_required_title
+		margin-top: 62px
+		color: $red
+	&_block_desc
+		color: $light_blue
+	&_list, &_block_desc
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+	li
+		list-style-type: none
+		margin: 0 0 10px 20px
+		position: relative
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 20px
+			width: 21px
+			left: -32px
+			background-image: url(../img/icons/check_points_blue.png)
 
-.condition_title
-	font-size: 22px
-	font-style: normal
-	font-weight: 400
-	line-height: 24px
-
-.condition_list, .condition_block_desc
-	font-size: 17px
-	font-style: normal
-	font-weight: 300
-	line-height: 24px
-
-.condition_block_desc
-	color: $light_blue
-
-.condition_required_title
-	margin-top: 61px
-	color: $red
+.condition_required_list 
+	li
+		&::before
+			background-image: url(../img/icons/check_points_red.png)

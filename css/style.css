@@ -284,8 +284,40 @@ a:link, a:visited, a:active, a:hover {
 }
 
 .app_items_plus {
-  display: block;
-  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+.app_items_plus::before {
+  content: "";
+  background-color: #1CA8C3;
+  width: 14px;
+  height: 2px;
+}
+.app_items_plus::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 14px;
+  background-color: #1CA8C3;
+}
+
+.app_items_icon:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  background-color: #232323;
+}
+.app_items_icon:hover .app_items_plus:before, .app_items_icon:hover .app_items_plus:after {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  background-color: #FF5656;
 }
 
 .app_items_title {
@@ -372,7 +404,6 @@ a:link, a:visited, a:active, a:hover {
 
 /*	  -----	  Condition Section	  -----	  */ 
 .condition {
-  max-height: 920px;
   padding: 68px 0 80px 0;
 }
 .condition_block {
@@ -380,27 +411,37 @@ a:link, a:visited, a:active, a:hover {
 }
 .condition_title {
   color: #1CA8C3;
-}
-
-.condition_title {
   font-size: 22px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
-
-.condition_list, .condition_block_desc {
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 24px;
+.condition_required_title {
+  margin-top: 62px;
+  color: #FF5656;
 }
-
 .condition_block_desc {
   color: #1CA8C3;
 }
+.condition_list, .condition_block_desc {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.condition li {
+  list-style-type: none;
+  margin: 0 0 10px 20px;
+  position: relative;
+}
+.condition li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 21px;
+  left: -32px;
+  background-image: url(../img/icons/check_points_blue.png);
+}
 
-.condition_required_title {
-  margin-top: 61px;
-  color: #FF5656;
+.condition_required_list li::before {
+  background-image: url(../img/icons/check_points_red.png);
 }
