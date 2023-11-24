@@ -20,6 +20,9 @@ a:link, a:visited, a:active, a:hover
 	color: $white
 	font-weight: 400
 	border-radius: 7px
+	&:hover
+		background-image: none
+		background-color: $light_blue
 .label
 	margin: 0px auto 0 auto
 	background-color: #000
@@ -225,12 +228,12 @@ a:link, a:visited, a:active, a:hover
 		width: 2px
 		height: 14px
 		background-color: $light_blue
-	
-.app_items_icon	
+
+.app_items_icon
 	&:hover
 		transition: 0.3s all
 		background-color: #232323
-		.app_items_plus	
+		.app_items_plus
 			&:before, &:after
 				transition: 0.3s all
 				background-color: $red
@@ -335,7 +338,76 @@ a:link, a:visited, a:active, a:hover
 			left: -32px
 			background-image: url(../img/icons/check_points_blue.png)
 
-.condition_required_list 
+.condition_required_list
 	li
 		&::before
 			background-image: url(../img/icons/check_points_red.png)
+
+/*	  -----	  World Section	  -----	  */ 
+
+.world
+	min-height: 720px
+	background: url(../img/background/world_bg.png) center center/cover no-repeat
+	padding: 48px 0 22px 0
+	position: relative
+	&_label
+		background-color: $white
+		color: #000
+	&_title
+		color: $white
+	&_subtitle
+		color: $white
+	&_links a:link, a:visited, a:active
+		color: $light_blue
+		font-size: 15px
+		font-style: normal
+		font-weight: 400
+		line-height: 68px
+		text-transform: uppercase
+		position: absolute
+		bottom: 22px
+		left: 50%
+		transform: translateX(-50%)
+	&_links a:hover
+		color: $red
+		transition: 0.3s all
+
+/*	  -----	  Footer	  -----	  */ 
+
+.foot
+	padding-top: 12px
+	&_line
+		width: 301px
+		height: 7px
+		background-color: $light_blue
+		margin: 0 auto
+	&_maine_links
+		list-style-type: none
+		display: flex
+		justify-content: space-around
+		padding-top: 25px
+	&_maine_links a
+		color: #070716
+		font-size: 15px
+		font-style: normal
+		font-weight: 300
+		text-transform: uppercase
+	&_about_links
+		list-style-type: none
+		display: flex
+		justify-content: space-between
+	&_about_links a
+		color: #999
+		font-size: 11px
+		font-style: normal
+		text-transform: uppercase
+	&_lg
+		text-align: center
+	&_lg a
+		display: block
+		color: $light_blue
+		font-size: 11px
+		font-style: normal
+		font-weight: 400
+		line-height: 68px
+		text-transform: uppercase

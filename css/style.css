@@ -18,6 +18,10 @@ a:link, a:visited, a:active, a:hover {
   font-weight: 400;
   border-radius: 7px;
 }
+.main_btn:hover {
+  background-image: none;
+  background-color: #1CA8C3;
+}
 
 .label {
   margin: 0px auto 0 auto;
@@ -444,4 +448,94 @@ a:link, a:visited, a:active, a:hover {
 
 .condition_required_list li::before {
   background-image: url(../img/icons/check_points_red.png);
+}
+
+/*	  -----	  World Section	  -----	  */ 
+.world {
+  min-height: 720px;
+  background: url(../img/background/world_bg.png) center center/cover no-repeat;
+  padding: 48px 0 22px 0;
+  position: relative;
+}
+.world_label {
+  background-color: #fff;
+  color: #000;
+}
+.world_title {
+  color: #fff;
+}
+.world_subtitle {
+  color: #fff;
+}
+.world_links a:link, .world a:visited, .world a:active {
+  color: #1CA8C3;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 68px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.world_links a:hover {
+  color: #FF5656;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+/*	  -----	  Footer	  -----	  */ 
+.foot {
+  padding-top: 12px;
+}
+.foot_line {
+  width: 301px;
+  height: 7px;
+  background-color: #1CA8C3;
+  margin: 0 auto;
+}
+.foot_maine_links {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 25px;
+}
+.foot_maine_links a {
+  color: #070716;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.foot_about_links {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.foot_about_links a {
+  color: #999;
+  font-size: 11px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.foot_lg {
+  text-align: center;
+}
+.foot_lg a {
+  display: block;
+  color: #1CA8C3;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 68px;
+  text-transform: uppercase;
 }
